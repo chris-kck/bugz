@@ -4,35 +4,20 @@ import './App.css';
 import 'semantic-ui-css/semantic.min.css'
 import { Button } from 'semantic-ui-react'
 import TimeClientInstance from './Adapter/timeapi';
+import TimezoneList from "./components/timezones";
+import Timezonesdropdown from "./components/timezonesdropdown";
+import TabExampleDefaultActiveIndex from "./components/tabs";
 
-const ButtonExampleButton = () => <Button>Click Here</Button>
 
-  TimeClientInstance.getTimeZones()
-      .then(res=>{
-        const tz = res;
-        console.log(tz.data);
-      });
-
+const ButtonExampleButton = () => <Button>Click Here Haha</Button>
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="App" >
+      {/*<header className="App-header" style={{'background-color':'grey'}}>*/}
+      {/*</header>*/}
+        <TabExampleDefaultActiveIndex></TabExampleDefaultActiveIndex>
         <ButtonExampleButton></ButtonExampleButton>
-
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
     </div>
   );
 }

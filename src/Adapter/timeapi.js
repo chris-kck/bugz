@@ -15,6 +15,20 @@ class TimeClient {
             console.error(error);
             throw error;
         }
+
+
+    }
+
+    async getTime(timezone) {
+        try {
+            const res = await this.timeClient.get(timezone);
+            return res.data.datetime;
+        } catch (error) {
+            console.error(error);
+            throw error;
+        }
+
+
     }
 
 }
